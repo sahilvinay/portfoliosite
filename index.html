@@ -1,0 +1,355 @@
+<html lang="en">
+	
+<head>
+		<title>Sahil Vinay - Product builder and entrepreneur</title>
+		<link rel="icon" type="image/png" href="images/favicon.png">
+		<meta name="description" content="Dan Rowden is an English developer and designer, entrepreneur and magazine reader.">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+		<link href="https://rsms.me/inter/inter.css" rel="stylesheet">
+		<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Inter', "Helvetica Neue", sans-serif;
+			font-size: 16px;
+			line-height: 1.3;
+			color: #111;
+			background-color: #fff;
+			max-width: 430px;
+			margin: auto;
+		  text-rendering: optimizeLegibility;
+		  -webkit-font-smoothing: antialiased;
+		  -moz-osx-font-smoothing: grayscale;
+		}
+		@media (min-width: 600px) {
+			body {
+				padding: 0 2rem 2rem;
+				max-width: 860px;
+				text-align: left;
+			}
+		}
+
+		.black { color: #111 !important; }
+		.b { font-weight: bold }
+
+		a:link, 
+		a:visited {
+			color: inherit;
+			border-bottom: 1px solid;
+			text-decoration: none;
+			transition: color 0.2s, border 0.2s;
+		}
+		a:hover {
+			color: #aaa;
+		}
+		a.button:hover {
+			color: #0086E2;
+		}
+		a.b0 { border: none; }
+
+		.fs14 { font-size: 14px; }
+		.fs20 { font-size: 20px; }
+		.fs24 { font-size: 24px; }
+		.fs30 { font-size: 30px; }
+		.fs36 { font-size: 36px; }
+		.fs40 { font-size: 40px; }
+		.fs60 { font-size: 60px; }
+		@media (max-width: 767px) {
+			.fs20 { font-size: 16px; }
+			.fs24 { font-size: 19.2px; }
+			.fs30 { font-size: 24px; }
+			.fs36 { font-size: 28.8px; }
+			.fs40 { font-size: 32px; }
+			.fs60 { font-size: 48px; }
+		}
+
+		.grey, a.grey { color: #888; }
+
+		.normal { font-weight: normal; }
+		.bold { font-weight: bold; }
+		.tc { text-align: center; }
+		.tr { text-align: right; }
+		.tl { text-align: left; }
+		.v-mid { vertical-align: middle; }
+
+		.mt1 { margin-top: 1rem; }
+		.mt2 { margin-top: 2rem; }
+		.mb1 { margin-bottom: 1rem; }
+		.mb2 { margin-bottom: 2rem; }
+		.mb4 { margin-bottom: 4rem !important; }
+
+		.pl1 { padding-left: 1rem; }
+
+		.list { list-style: none; margin-left: 0; }
+
+		.section { padding: 1rem; }
+
+		.new { font-size: .7em; opacity: 0.7; text-transform: uppercase; }
+
+		.section--header {
+			position: relative;
+			margin-top: 3rem;
+			margin-bottom: 6rem;
+		}
+
+
+		.photo {
+			width: 100%;
+			z-index: -1;
+		}
+
+		.name, .title {
+			margin-bottom: 0.5rem;
+			z-index: 1;
+		}
+		.name { font-weight: 800; }
+
+		@media (min-width: 450px) {
+			.name {
+				position: absolute;
+				right: 0;
+				top: 70px;
+				text-align: right;
+			}
+			.title {
+				position: absolute;
+				right: 0;
+				top: 120px;
+				text-align: right;
+				max-width: 240px;
+			}
+
+			.photo-container {
+				position: relative;
+				margin: 0 auto 3rem;
+				height: 260px;
+				max-width: 460px;
+			}
+			@media (min-width: 600px) {
+				.photo-container {
+					text-align: center;
+				}
+			}
+			.photo-col {
+				width: 70%;
+			}
+		}
+
+		@media (max-width: 600px) {
+			.list li { 
+				display: inline;
+			}
+			.list li:not(:last-of-type):after { 
+				content: " - ";
+			}
+		}
+		@media (min-width: 601px) {
+			.lists {
+		    position: absolute;
+		    right: 62px;
+		    bottom: -16px;
+			}
+		}
+
+		.location { margin-top: 1rem; }
+		@media (min-width: 600px) {
+			.location { margin-top: 0 }
+		}
+
+		.pin { 
+			width: 16px; 
+			fill: #5F5F5F;
+			vertical-align: top;
+		}
+
+		.project {
+			padding-bottom: 3rem;
+		}
+		.project p { 
+			margin-top: 0.5rem;
+			line-height: 1.3; 
+		}
+		.project--col p { 
+			margin-top: 1rem;
+		}
+		@media (min-width: 600px) {
+			.project--col {
+				width: 50%;
+				display: inline-block;
+				padding: 1rem 0 2rem 1rem;
+				vertical-align: top;
+			}
+			.project--col:nth-of-type(2n+1) {
+				padding-right: 1rem;
+				padding-left: 0;
+			}
+		}
+
+		.row {
+			margin-top: 1.5rem;
+			margin-bottom: 1.5rem;
+		}
+		.right {
+			margin-top: 1rem;
+			margin-bottom: 2.5rem;
+		}
+		@media (min-width: 600px) {
+			.row { 
+				display: table;
+				width: 100%;
+				margin-bottom: 3rem;
+			}
+			.left {
+				display: table-cell;
+				width: 76%;
+				padding-right: 8%;
+			}
+			.right {
+				display: table-cell;
+				width: 24%;
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
+
+		.section--past,
+		.section--interviews {
+			max-width: 550px;
+			margin: 4rem auto 0;
+		}
+		.section--interviews p {
+			margin: 0.5rem 0;
+		}
+
+		.footer {
+			margin: 5rem 0;
+			border-top: 1px solid #eee;
+			padding-top: 5rem;
+		}
+
+		@media (max-width: 767px) {
+			.hide-small{display: none;}
+		}
+
+		</style>
+	</head>
+
+	<body>
+
+		<header class="section section--header flex">
+
+			<div class="photo-container">
+				<h1 class="bold name fs36">Sahil Vinay</h1>
+				<div class="title normal fs24">
+					Backend Developer
+					<div class="fs20" style="margin-top: 6px">Websites, games<span class="hide-small">-<br></span>letters &amp; marketplaces</div>
+				</div>
+
+				<div class="photo-col">
+					<img src="images/dan.jpg" alt="sahil" class="photo">
+
+					<div class="mt1 fs14">
+						<a href="https://twitter.com/dr" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#a2a2a2"/></svg> dr</a>
+						&nbsp;
+						<!-- <a href="https://instagram.com/danrdn" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><g class="nc-icon-wrapper" fill="#a2a2a2"><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z"/><path data-color="color-2" d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle data-color="color-2" cx="18.406" cy="5.594" r="1.44"/></g></svg> danrdn</a>
+						&nbsp; -->
+						<a href="https://instagram.com/dansmags" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><g class="nc-icon-wrapper" fill="#a2a2a2"><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z"/><path data-color="color-2" d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle data-color="color-2" cx="18.406" cy="5.594" r="1.44"/></g></svg> sahilcreaticss</a>
+						&nbsp;
+						<a href="https://dribbble.com/dr/" class="b0" target="_blank">
+							<svg class="v-mid" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm2.2 7.4s-.2-.6-.3-.8c1.7-.8 2.8-1.7 3.2-2.2.7.9 1.1 2 1.2 3.2-.8-.2-2.6-.5-4.1-.2zM9.1 5.1C8.3 3.7 7.4 2.5 7 1.8c1.9-.5 3.6.1 4.9 1.3-.4.5-1.2 1.3-2.8 2zm-4-2.6c.4.5 1.2 1.7 2 3.2-2.2.5-4.2.6-5.1.6.4-1.6 1.6-3 3.1-3.8zM8 7.3c.1.2.2.4.3.5-2.8.9-4.6 3.2-5.2 4.1-.8-1.1-1.3-2.4-1.3-3.7.9-.1 3.5-.2 6.2-.9zm1 2.2c.7 2 1.1 3.6 1.2 4.4-2.1.7-4.5.3-5.8-.8.4-.7 1.7-2.5 4.6-3.6zm2.9 3.4c-.2-.8-.5-2.2-1.1-3.9 1.1-.2 2.7 0 3.3.2-.3 1.5-1.1 2.8-2.2 3.7z" fill="#a2a2a2"/></svg> dr
+						</a>
+						<!-- &nbsp;
+						<a href="https://www.linkedin.com/in/danrowden/" class="b0" target="_blank">
+							<svg class="v-mid" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							        <g id="Desktop" transform="translate(-538.000000, -443.000000)" fill="#A2A2A2" fill-rule="nonzero">
+							            <g id="logo-linkedin" transform="translate(538.000000, 443.000000)">
+							                <path d="M15.3333333,0 L0.666666667,0 C0.266666667,0 0,0.266666667 0,0.666666667 L0,15.3333333 C0,15.7333333 0.266666667,16 0.666666667,16 L15.3333333,16 C15.7333333,16 16,15.7333333 16,15.3333333 L16,0.666666667 C16,0.266666667 15.7333333,0 15.3333333,0 Z M4.73333333,13.6666667 L2.4,13.6666667 L2.4,6 L4.8,6 L4.8,13.6666667 L4.73333333,13.6666667 Z M3.53333333,4.93333333 C2.8,4.93333333 2.13333333,4.33333333 2.13333333,3.53333333 C2.13333333,2.8 2.73333333,2.13333333 3.53333333,2.13333333 C4.26666667,2.13333333 4.93333333,2.73333333 4.93333333,3.53333333 C4.93333333,4.33333333 4.33333333,4.93333333 3.53333333,4.93333333 Z M13.6666667,13.6666667 L11.2666667,13.6666667 L11.2666667,9.93333333 C11.2666667,9.06666667 11.2666667,7.93333333 10.0666667,7.93333333 C8.8,7.93333333 8.66666667,8.86666667 8.66666667,9.86666667 L8.66666667,13.6666667 L6.26666667,13.6666667 L6.26666667,6 L8.53333333,6 L8.53333333,7.06666667 L8.53333333,7.06666667 C8.86666667,6.46666667 9.6,5.86666667 10.8,5.86666667 C13.2,5.86666667 13.6666667,7.46666667 13.6666667,9.53333333 L13.6666667,13.6666667 Z" id="Shape"></path>
+							            </g>
+							        </g>
+							    </g>
+							</svg>
+						</a> -->
+						<!-- &nbsp;
+						<a href="https://www.youtube.com/channel/UC_uFIBUo02CCtmTJw6DxuCQ" class="b0" target="_blank">
+							<svg class="v-mid" width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							        <g id="Desktop" transform="translate(-565.000000, -445.000000)" fill="#A2A2A2" fill-rule="nonzero">
+							            <g id="logo-youtube" transform="translate(565.000000, 445.000000)">
+							                <path d="M15.8,2.8 C15.6,1.5 15,0.6 13.6,0.4 C11.4,0 8,0 8,0 C8,0 4.6,0 2.4,0.4 C1,0.6 0.3,1.5 0.2,2.8 C0,4.1 0,6 0,6 C0,6 0,7.9 0.2,9.2 C0.4,10.5 1,11.4 2.4,11.6 C4.6,12 8,12 8,12 C8,12 11.4,12 13.6,11.6 C15,11.3 15.6,10.5 15.8,9.2 C16,7.9 16,6 16,6 C16,6 16,4.1 15.8,2.8 Z M6,9 L6,3 L11,6 L6,9 Z" id="Shape"></path>
+							            </g>
+							        </g>
+							    </g>
+							</svg>
+						</a> -->
+					</div>
+				</div>
+
+				<div class="lists">
+
+					<ul class="list fs14 grey tl location">
+						<li>English</li>
+						<li>13 yrs</li>
+						<li>Dubai</li>
+					</ul>
+
+				</div>
+			</div>
+
+		</header>
+
+		<section class="section section--work">
+			<h1 class="mb1 mt2 normal grey fs20">My projects</h1>
+			
+			<article class="project project--col">
+				<h1 class="normal"><a href="https://tangled.ae/" target="_blank" class="b0" style="margin:13px 0 2px;display: inline-block;"><img src="https://tangled.ae/images/logo.svg" width="134" alt="Cove"></a></h1>
+				<p>Online classes are a bore, but we fixed it! with instructors of your age and courses in everything, learn anything with tangled.				</p>
+				<p class="project__tags fs14"><a href="https://tangled.ae/" target="_blank" class="grey b0">tangled.ae &rsaquo;</a></p>
+			</article><article class="project project--col">
+				<h1 class="normal"><a href="https://mentrgo.com/" target="_blank" class="b0" style="margin:19px 0 5px;display: inline-block;"><img src="https://res.cloudinary.com/dxhh8gobe/image/upload/v1592064817/LXW_mnjvit.svg" width="130" alt="Gloat"></a></h1>
+				<p>We're making Finding a Mentor easy, honest and empowering by bringing the entire Hassle journey online.				</p>
+				<p class="project__tags fs14"><a href="https://mentrgo.com/" target="_blank" class="grey b0">mentrgo.com &rsaquo;</a></p>
+			</article><article class="project project--col">
+				<h1 class="normal"><a href="https://zapling.green//" target="_blank" class="b0" style="margin:17px 0 5px;display: inline-block;"><img src="https://github.com/TheAadithyan/zapling/raw/master/frontend/static/Zapling@2x.png" width="215" alt="Tools for Ghost"></a></h1>
+				<p>Zapling allows you to plant a tree for any Zapier trigger.</p>
+				<p class="project__tags fs14"><a href="https://zapling.green/" target="_blank" class="grey b0">zapling.green &rsaquo;</a></p>
+			</article><article class="project project--col">
+				<h1 class="normal"><a href="https://subsail.com/" target="_blank" class="b0" style="margin:12px 0 9px;display: inline-block;"><img src="https://github.com/TheAadithyan/Lova/raw/master/LOVA.png?raw=true" width="127" alt="Subsail"></a></h1>
+				<p>Roll your own ad-free Mint clone for managing personal finances using publicly available APIs.					.</p>
+				<p class="project__tags fs14"><a href="https://lova.com/" target="_blank" class="grey b0">lova.co &rsaquo;</a></p>
+			</article><article class="project project--col">
+		</section>
+<!-- 
+	
+		-->
+	
+		<footer class="footer tc fs14">
+			<p class="mb1"><a href="https://www.instagram.com/sahilcreaticss/" title="DM me" class="b0" style="padding: 6px 3px 6px 6px; background-color: #f3f3f3">Say hi on Instagram DM! @sahilcreaticss</a></p>
+			<p class="mb1">I am available for hire: design, development and consultation.</p>
+			<p>Created in Dubai <script>document.write(new Date().getFullYear())</script></p>
+		</footer>
+
+		<!-- Fathom - simple website analytics - https://usefathom.com -->
+		<script>
+		(function(f, a, t, h, o, m){
+		a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+		};
+		o=f.createElement('script'),
+		m=f.getElementsByTagName('script')[0];
+		o.async=1; o.src=t; o.id='fathom-script';
+		m.parentNode.insertBefore(o,m)
+		})(document, window, 'https://cdn.usefathom.com/tracker.js', 'fathom');
+		fathom('set', 'siteId', 'IMYHCRTX');
+		fathom('trackPageview');
+		</script>
+		<!-- / Fathom -->
+	</body>
+
+
+<!-- Mirrored from danrowden.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jul 2020 13:20:41 GMT -->
+</html>
